@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Disha",
+      "role": "Software Developer",
+      "imgSrc": "Disha.jpg",
+      "socialLinks": {
+        "linkedin": "#",
+        "email": "#",
+        "instagram": "#"
+      }
+    },
+    {
+      "name": "Vanshita",
+      "role": "UI/UX Designer",
+      "imgSrc": "Vanshita.jpg",
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/vanshita-mehta-195bab2bb",
+        "email": "#",
+        "instagram": "https://www.instagram.com/vanxshita._/"
+      }
+    },
+    {
+      "name": "Ojasveer",
+      "role": "Project Manager",
+      "imgSrc": "Ojasveer1.jpg",
+      "socialLinks": {
+        "linkedin": "#",
+        "email": "#",
+        "instagram": "#"
+      }
+    }
+  ]

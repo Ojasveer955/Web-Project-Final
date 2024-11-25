@@ -1,0 +1,290 @@
+[
+    {
+        "id": 1,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "category": "Fiction",
+        "cover": "./assets/TheGreatGatsby.jpg",
+        "description": "A classic novel set in the 1920s about wealth and love."
+    },
+    {
+        "id": 2,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "category": "Non-Fiction",
+        "cover": "./assets/ABriefHistoryOfTime.jpg",
+        "description": "Exploring the nature of space and time, this book delves into cosmology."
+    },
+    {
+        "id": 3,
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "category": "Sci-Fi",
+        "cover": "./assets/Dune.jpg",
+        "description": "An epic tale of politics, religion, and survival on the desert planet Arrakis."
+    },
+    {
+        "id": 4,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "category": "Fiction",
+        "cover": "./assets/ToKillAMockingbird.jpg",
+        "description": "A profound look at racism and morality in the American South."
+    },
+    {
+        "id": 5,
+        "title": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "category": "Non-Fiction",
+        "cover": "./assets/SelfishGene.jpg",
+        "description": "An exploration of evolutionary biology and the concept of the 'gene-centered' view of evolution."
+    },
+    {
+        "id": 6,
+        "title": "1984",
+        "author": "George Orwell",
+        "category": "Sci-Fi",
+        "cover": "./assets/1984.jpg",
+        "description": "A dystopian novel about a society under complete surveillance and control."
+    },
+    {
+        "id": 7,
+        "title": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "category": "Educational",
+        "cover": "./assets/SapiensABriefHistoryOfHumankind.jpg",
+        "description": "A look into the history of humankind, from ancient ancestors to modern society."
+    },
+    {
+        "id": 8,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "category": "Fiction",
+        "cover": "./assets/TheCatcherInTheRye.jpg",
+        "description": "A story about teenage rebellion and the struggles of adolescence."
+    },
+    {
+        "id": 9,
+        "title": "The Art of War",
+        "author": "Sun Tzu",
+        "category": "Non-Fiction",
+        "cover": "./assets/TheArtOfWar.jpg",
+        "description": "An ancient Chinese text on strategy and warfare."
+    },
+    {
+        "id": 10,
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "category": "Fiction",
+        "cover": "./assets/TheLordOfTheRings.jpg",
+        "description": "A high-fantasy epic about the journey to destroy a powerful ring."
+    },
+    {
+        "id": 11,
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "category": "Educational",
+        "cover": "./assets/ThinkingFastAndSlow.jpg",
+        "description": "Insights into the two systems that drive the way we think and make decisions."
+    },
+    {
+        "id": 12,
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "category": "Sci-Fi",
+        "cover": "./assets/TheHitchHikerGuideToTheGalaxy.jpg",
+        "description": "A comedic science fiction adventure through space."
+    },
+    {
+        "id": 13,
+        "title": "Harry Potter and The Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/ThePhilosopherStone.jpg",
+        "description": "Harry discovers he's a wizard and faces dark forces at Hogwarts."
+    },
+    {
+        "id": 14,
+        "title": "Harry Potter and The Chamber Of Secrets",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/TheChamberOfSecret.jpg",
+        "description": "A hidden chamber is opened, threatening students' safety at Hogwarts."
+    },
+    {
+        "id": 15,
+        "title": "Harry Potter and The Prisoner Of Azkaban",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/PrisonerOfAzkaban.jpg",
+        "description": "Harry learns about his past while evading a dangerous escaped prisoner."
+    },
+    {
+        "id": 16,
+        "title": "Harry Potter and The Goblet Of Fire",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/GobletOfFire.jpg",
+        "description": "Harry enters a deadly magical tournament and uncovers a sinister plot."
+    },
+    {
+        "id": 17,
+        "title": "Harry Potter and The Order Of The Phoenix",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/OrderOfThePhoenix.jpg",
+        "description": "Harry confronts a corrupt Ministry and prepares for Voldemort’s return."
+    },
+    {
+        "id": 18,
+        "title": "Harry Potter and The Half-Blood Prince",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/HalfBloodPrince.jpg",
+        "description": "Harry uncovers Voldemort’s past to learn his enemy’s deepest secrets."
+    },
+    {
+        "id": 19,
+        "title": "Harry Potter and The Deathly Hallows",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "cover": "./assets/DeathlyHallows.jpg",
+        "description": "Harry’s final battle against Voldemort unfolds, deciding the wizarding world’s fate."
+    },
+    {
+        "id": 20,
+        "title": "The Seven Husbands of Evelyn Hugo",
+        "author": "Taylor Jenkins Reid",
+        "category": "Hottest Trending",
+        "cover": "./assets/SevenHusbandsOfEvelynHugo.jpg",
+        "description": "A Hollywood icon's life story, filled with passion, scandal, and love."
+    },
+    {
+        "id": 21,
+        "title": "Project Hail Mary",
+        "author": "Andy Weir",
+        "category": "Hottest Trending",
+        "cover": "./assets/ProjectHailMary.jpg",
+        "description": "A thrilling sci-fi adventure with a lone astronaut on a mission to save Earth."
+    },
+    {
+        "id": 22,
+        "title": "Educated",
+        "author": "Tara Westover",
+        "category": "Minimum 40% Discount",
+        "cover": "./assets/Educated.jpg",
+        "description": "A memoir about a young woman's journey from a survivalist family to Cambridge University."
+    },
+    {
+        "id": 23,
+        "title": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "category": "International Bestseller",
+        "cover": "./assets/WhereTheCrawdadsSing.jpg",
+        "description": "A murder mystery set in the North Carolina marshlands."
+    },
+    {
+        "id": 24,
+        "title": "Chainsaw Man",
+        "author": "Tatsuki Fujimoto",
+        "category": "Manga",
+        "cover": "./assets/ChainsawMan.jpg",
+        "description": "A young man with the power to transform into Chainsaw Man fights devils."
+    },
+    {
+        "id": 25,
+        "title": "Demon Slayer: Kimetsu no Yaiba",
+        "author": "Koyoharu Gotouge",
+        "category": "Manga",
+        "cover": "./assets/DemonSlayer.jpg",
+        "description": "A boy embarks on a quest to save his sister and slay demons."
+    },
+    {
+        "id": 26,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "category": "International Bestseller",
+        "cover": "./assets/AtomicHabits.jpeg",
+        "description": "A practical guide to building good habits and breaking bad ones."
+    },
+    {
+        "id": 27,
+        "title": "The Midnight Library",
+        "author": "Matt Haig",
+        "category": "Newest Arrival",
+        "cover": "./assets/TheMidnightLibrary.jpg",
+        "description": "A woman finds herself in a library between life and death, with a chance to try out different lives."
+    },
+    {
+        "id": 28,
+        "title": "Berserk",
+        "author": "Kentaro Miura",
+        "category": "Manga",
+        "cover": "./assets/Berserk.jpg",
+        "description": "A dark fantasy saga of Guts, a lone mercenary, seeking revenge against supernatural forces."
+    },
+    {
+        "id": 29,
+        "title": "Can't Hurt Me",
+        "author": "David Goggins",
+        "category": "Minimum 40% Discount",
+        "cover": "./assets/CantHurtMe.jpg",
+        "description": "A story of mental toughness and perseverance by a Navy SEAL turned endurance athlete."
+    },
+    {
+        "id": 30,
+        "title": "Becoming",
+        "author": "Michelle Obama",
+        "category": "International Bestseller",
+        "cover": "./assets/Becoming.jpg",
+        "description": "The memoir of former First Lady Michelle Obama, reflecting on her life and achievements."
+    },
+    {
+        "id": 31,
+        "title": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "category": "Hottest Trending",
+        "cover": "./assets/TheSilentPatient.jpg",
+        "description": "A psychological thriller about a woman who stops speaking after being accused of murder."
+    },
+    {
+        "id": 32,
+        "title": "The Vanishing Half",
+        "author": "Brit Bennett",
+        "category": "Newest Arrival",
+        "cover": "./assets/TheVanishingHalf.webp",
+        "description": "The story of twin sisters who live in two very different worlds, exploring identity and family."
+    },
+    {
+        "id": 33,
+        "title": "Spy x Family",
+        "author": "Tatsuya Endo",
+        "category": "Manga",
+        "cover": "./assets/SpyXFamily.jpg",
+        "description": "A spy forms a fake family for a mission, but his new 'family' has secrets of their own."
+    },
+    {
+        "id": 34,
+        "title": "One Piece",
+        "author": "Eiichiro Oda",
+        "category": "Manga",
+        "cover": "./assets/OnePiece.jpeg",
+        "description": "A group of pirates seeks the legendary One Piece treasure on a high-seas adventure."
+    },
+    {
+        "id": 35,
+        "title": "The Lean Startup",
+        "author": "Eric Ries",
+        "category": "Minimum 40% Discount",
+        "cover": "./assets/TheLeanStartup.jpeg",
+        "description": "A guide on how to build a sustainable business using lean methodologies."
+    },
+    {
+        "id": 36,
+        "title": "The Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson",
+        "category": "Hottest Trending",
+        "cover": "./assets/TheSubtleArt.png",
+        "description": "A self-help book about embracing life's challenges with realism and resilience."
+    }
+]

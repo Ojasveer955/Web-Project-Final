@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RequestBook.css">
+    <title>Request A Book | The Next Chapter</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.jpeg" alt="">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="Explore.html">Explore</a></li>
+                    <li><a href="Signup.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Background Overlay -->
+<div class="popup-overlay"></div>
+
+    <div class="request-form-container">
+        <h2>Request a Book</h2>
+        <form id="requestForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="bookTitle">Book Title:</label>
+            <input type="text" id="bookTitle" name="bookTitle" required>
+            
+            <label for="bookAuthor">Author:</label>
+            <input type="text" id="bookAuthor" name="bookAuthor">
+            
+            <label for="bookGenre">Genre:</label>
+            <input type="text" id="bookGenre" name="bookGenre">
+            
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            
+            <button type="submit">Submit Request</button>
+            <p id="formMessage"></p>
+        </form>
+    </div>
+    
+    <div id="successPopup" class="popup">
+        <p>Your request has been submitted successfully!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <footer>
+        <div class="Main-links">
+            <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Explore.html">Explore</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-services">
+            <ul>
+                <li><a href="#">Request a Book</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="address-contact">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, est nisi cumque accusamus sit voluptas ex
+                odio odit.</p>
+            <p>+91 1234567890</p>
+            <p>+91 1234567890</p>
+        </div>
+
+        <div class="social">
+            <h4>Follow us on Social Media</h4>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#Social1"><img src="./assets/instagram-svgrepo-com.png" height="40px" width="40px"></a>
+                    </li>
+                    <li><a href="#Social2"><img src="./assets/facebook.svg" height="40px" width="40px"></a></li>
+                    <li><a href="#Social3"><img src="./assets/twitter.svg" height="40px" width="40px"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="RequestBook.js"></script>
+</body>
+</html>
