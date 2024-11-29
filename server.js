@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
 
@@ -10,17 +12,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://dishasatija23cse:aQp4gZnnQis0reNE@book-website.5kb60.mongodb.net/?retryWrites=true&w=majority&appName=Book-Website", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const MONGO_URI = "mongodb+srv://dishasatija23cse:aQp4gZnnQis0reNE@book-website.5kb60.mongodb.net/?retryWrites=true&w=majority&appName=Book-Website";
+mongoose.connect(MONGO_URI);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 db.once("open", () => console.log("Connected to MongoDB"));
-
-
-// Ye sir se puchna h kis isme kar skte h ya nahi schema and model bhi
 
 // Schema and Model
 const BookSchema = new mongoose.Schema({
@@ -33,6 +30,27 @@ const BookSchema = new mongoose.Schema({
 });
 
 const Book = mongoose.model("Book", BookSchema);
+
+// Insert Data from JSON File
+const insertBooks = async () => {
+  try {
+    // Construct the correct file path
+    const filePath = path.join(__dirname, "Explore.json");
+
+    // Read the JSON file
+    const data = fs.readFileSync(filePath, "utf8");
+    const books = JSON.parse(data);
+
+    // Insert data into the database
+    const result = await Book.insertMany(books);
+    console.log("Books inserted successfully:", result);
+  } catch (error) {
+    console.error("Error inserting books:", error);
+  }
+};
+
+// Run the insertion function
+insertBooks().catch((err) => console.error(err));
 
 // CRUD Routes
 
@@ -103,4 +121,3 @@ app.delete("/books/:id", async (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-
