@@ -10,7 +10,7 @@ const bookRoutes = require("./routes/bookRoutes");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public'))) // to serve static files
+app.use('/assets', express.static('public/assets'));// to serve static files
 
 // Middleware
 app.use(bodyParser.json());
