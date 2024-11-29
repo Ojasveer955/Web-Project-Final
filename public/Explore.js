@@ -6,7 +6,7 @@ const itemsPerPage = 8; // Number of items to display per load
 // Load books data from JSON and apply category filter if specified in the URL
 async function loadBooks() {
     try {
-        const response = await fetch('Explore.json');
+        const response = await fetch('/api/books');
         books = await response.json();
 
         // Check URL for category parameter
