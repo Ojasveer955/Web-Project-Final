@@ -4,15 +4,15 @@ const bodyParser = require("body-parser");
 const cors = require("cors"); 
 const path = require("path");
 const Book = require("./models/Book");
-const bookRuotes = require("./routes/bookRoutes");
+const bookRoutes = require('./routes/bookRoutes');
 const connectDB = require("./database/mongodb");
-const bookRoutes = require("./routes/bookRoutes");
 
 const app = express();
 
-app.use('/assets', express.static('public/assets'));// to serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware
+app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/HomePage.html'));
 })
 
-// app.get('/Explore', (req, res) => {
+// app.get('/Explore.html', (req, res) => {
 //   res.sendFile(path.join(__dirname + '/public/Explore.html'));
 // })
 
