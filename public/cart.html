@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The NextChapter - Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">The NextChapter</div>
+  </header>
+
+  <div class="cart-container">
+    <header>
+      <h2>My Cart</h2>
+      <p id="item-count">2 items</p>
+    </header>
+
+    <div class="cart-items">
+      <!-- Item 1 -->
+      <div class="cart-item" data-price="30">
+        <img src="C:\Users\disha\OneDrive\Desktop\Web-Project-Final\public\gatsby.jpeg.jpg" alt="The Great Gatsby">
+        <div class="item-details">
+          <h3>The Great Gatsby</h3>
+          <p class="price">$30.00</p>
+          <button class="save-for-later">Save For Later</button>
+        </div>
+        <div class="item-actions">
+          <button class="delete">🗑️</button>
+          <div class="quantity">
+            <button class="decrease">-</button>
+            <span class="quantity-value">1</span>
+            <button class="increase">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="cart-item" data-price="25">
+        <img src="C:\Users\disha\OneDrive\Desktop\Web-Project-Final\public\1984.jpeg.jpg" alt="1984">
+        <div class="item-details">
+          <h3>1984</h3>
+          <p class="price">$25.00</p>
+          <button class="save-for-later">Save For Later</button>
+        </div>
+        <div class="item-actions">
+          <button class="delete">🗑️</button>
+          <div class="quantity">
+            <button class="decrease">-</button>
+            <span class="quantity-value">1</span>
+            <button class="increase">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <p>Cart Subtotal: <span id="cart-subtotal">$55.00</span></p>
+      <button class="checkout">Checkout</button>
+    </div>
+
+    <div class="saved-for-later">
+      <h3>Saved for Later - <span id="saved-count">0</span></h3>
+      <div id="saved-items"></div>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>

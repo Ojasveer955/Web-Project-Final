@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #5A67D8;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cart-container {
+  max-width: 800px; /* Wider container */
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.cart-items {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-details .price {
+  color: #333;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.save-for-later {
+  background: none;
+  border: none;
+  color: #007BFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.item-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.item-actions .delete {
+  background: none;
+  border: none;
+  color: #FF4D4D;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity button {
+  background: #eee;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity span {
+  margin: 0 10px;
+}
+
+.cart-summary {
+  text-align: center;
+}
+
+.cart-summary p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cart-summary button {
+  background: #5A67D8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-summary button:hover {
+  background: #434190;
+}
+
+.saved-for-later {
+  margin-top: 20px;
+}
+
+.saved-for-later h3 {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
