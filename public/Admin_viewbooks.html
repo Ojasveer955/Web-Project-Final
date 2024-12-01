@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List | Next Chapter Admin</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tableBody = document.querySelector("table tbody");
+
+            // Fetch book data from the server
+            fetch('http://localhost:3000/api/books')
+                .then(response => response.json())
+                .then(data => {
+                    // Clear existing rows
+                    tableBody.innerHTML = '';
+
+                    // Populate table rows dynamically
+                    data.forEach((book, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td>${book.title}</td>
+                            <td>${book.author}</td>
+                            <td>${book.genre}</td>
+                            <td>
+                                <a href="Admin_updatebook.html?id=${book._id}">Edit</a> |
+                                <a href="Admin_deletebook.html?id=${book._id}">Delete</a>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching book data:', error);
+
+                    // Display an error message in the table
+                    tableBody.innerHTML = `
+                        <tr>
+                            <td colspan="6">Failed to load books. Please try again later.</td>
+                        </tr>
+                    `;
+                });
+
+            // Logout button functionality
+            const logoutButton = document.querySelector('#logoutButton');
+            logoutButton.addEventListener('click', () => {
+                // Redirect to the home page
+                window.location.href = 'HomePage.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Next Chapter Admin Dashboard</h1>
+        <!-- Add a logout button -->
+        <button id="logoutButton" class="logout-button">Logout</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#.html">Book List</a></li>
+            <li><a href="Admin_addbook.html">Add Book</a></li>
+            <li><a href="Admin_updatebook.html">Update Book</a></li>
+            <li><a href="Admin_deletebook.html">Delete Book</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Book List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

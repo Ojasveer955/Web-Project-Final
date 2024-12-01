@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Book | Next Chapter Admin</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Logout button functionality
+            const logoutButton = document.querySelector('#logoutButton');
+            logoutButton.addEventListener('click', () => {
+                // Redirect to the home page
+                window.location.href = 'HomePage.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Next Chapter Admin Dashboard</h1>
+        <button id="logoutButton" class="logout-button">Logout</button>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Admin_viewbooks.html">Book List</a></li>
+            <li><a href="Admin_addbook.html">Add Book</a></li>
+            <li><a href="Admin_updatebook.html">Update Book</a></li>
+            <li><a href="#.html">Delete Book</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Delete Book</h2>
+        <form action="#" method="POST">
+            <label for="book-id">Book ID to Delete:</label>
+            <input type="number" id="book-id" name="book-id" required>
+
+            <button type="submit">Delete Book</button>
+        </form>
+        <div class="warning-message" style="margin-top: 20px; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; border-radius: 4px;">
+            <strong>Warning:</strong> This action cannot be undone. Please make sure you want to delete this book before proceeding.
+        </div>
+    </div>
+</body>
+</html>

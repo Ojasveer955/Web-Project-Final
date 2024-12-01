@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextChapter Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Map IDs to respective admin pages
+            const pageMap = {
+                "read-books": "Admin_viewbooks.html",
+                "add-book": "Admin_addbook.html",
+                "update-book": "Admin_updatebook.html",
+                "delete-book": "Admin_deletebook.html"
+            };
+
+            // Add event listeners to each card
+            document.querySelectorAll(".option").forEach(option => {
+                option.addEventListener("click", () => {
+                    const page = pageMap[option.id];
+                    if (page) {
+                        window.location.href = page;
+                    }
+                });
+            });
+
+            // Logout button functionality
+            const logoutButton = document.querySelector("#logoutButton");
+            logoutButton.addEventListener("click", () => {
+                // Redirect to the home page
+                window.location.href = "HomePage.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>NextChapter Admin Dashboard</h1>
+    </header>
+    <main>
+        <section class="dashboard-options">
+            <div class="option" id="read-books">
+                <h2>Read Data</h2>
+                <p>View information about all books in stock</p>
+            </div>
+            <div class="option" id="add-book">
+                <h2>Add Book</h2>
+                <p>Add a new book to the stock</p>
+            </div>
+            <div class="option" id="update-book">
+                <h2>Update Book</h2>
+                <p>Update information about an existing book</p>
+            </div>
+            <div class="option" id="delete-book">
+                <h2>Delete Book</h2>
+                <p>Remove a book from the stock</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 NextChapter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book | Next Chapter Admin</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Logout button functionality
+            const logoutButton = document.querySelector('#logoutButton');
+            logoutButton.addEventListener('click', () => {
+                // Redirect to the home page
+                window.location.href = 'HomePage.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Next Chapter Admin Dashboard</h1>
+        <button id="logoutButton" class="logout-button">Logout</button>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Admin_viewbooks.html">Book List</a></li>
+            <li><a href="Admin_addbook.html">Add Book</a></li>
+            <li><a href="#.html">Update Book</a></li>
+            <li><a href="Admin_deletebook.html">Delete Book</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Update Book Information</h2>
+        <form action="#" method="POST">
+            <label for="book-id">Book ID:</label>
+            <input type="number" id="book-id" name="book-id" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Update Book</button>
+        </form>
+    </div>
+</body>
+</html>
