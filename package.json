@@ -1,27 +1,33 @@
 {
-  "name": "web-project-final",
+  "name": "untitled2",
   "version": "1.0.0",
-  "main": "About Us.js",
+  "description": "A Node.js project",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.1.0",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.5",
+    "jest": "^29.6.2",
+    "nodemon": "^3.1.7",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.3",
-    "connect-mongo": "^5.1.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "ejs": "^3.1.10",
-    "express": "^4.21.1",
-    "express-handlebars": "^8.0.1",
-    "express-session": "^1.18.1",
-    "mongodb": "^6.11.0",
-    "mongoose": "^8.8.3",
-    "nodemon": "^3.1.7"
-  }
+  "license": "ISC"
 }

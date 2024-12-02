@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Next Chapter - Update Book</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <header>
+        <h1>The Next Chapter</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Update Book Information</h2>
+        <form id="updateBookForm">
+            <!-- Book ID Field -->
+            <label for="bookId">Book ID</label>
+            <input type="text" id="bookId" placeholder="Enter Book ID to Search" required>
+
+            <button type="button" id="searchBtn">Search Book</button>
+
+            <!-- Book Details Section (Initially Hidden) -->
+            <div id="bookDetails" style="display:none;">
+                <!-- Book Title Field -->
+                <label for="bookTitle">Book Title</label>
+                <input type="text" id="bookTitle" placeholder="Book Title" required disabled>
+
+                <!-- Book Author Field -->
+                <label for="bookAuthor">Author</label>
+                <input type="text" id="bookAuthor" placeholder="Author" required disabled>
+
+                <!-- Book Category Field -->
+                <label for="bookCategory">Category</label>
+                <input type="text" id="bookCategory" placeholder="Category" required disabled>
+
+                <!-- Book Price Field -->
+                <label for="bookPrice">Price</label>
+                <input type="number" id="bookPrice" placeholder="Price" required disabled>
+
+                <!-- Book Cover Field -->
+                <label for="bookCover">Cover Image</label>
+                <input type="file" id="bookCover" accept="image/*">
+
+                <!-- Book Description Field -->
+                <label for="bookDescription">Description</label>
+                <textarea id="bookDescription" placeholder="Book Description" required disabled></textarea>
+
+                <button type="submit" id="updateBtn" disabled>Update Book</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="update.js"></script>
+</body>
+</html>

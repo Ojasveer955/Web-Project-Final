@@ -27,10 +27,13 @@ const getBookById = async (req, res) => {
 // Create a new book
 const createBook = async (req, res) => {
     try {
+        console.log('Request received:', req.body);
         const book = new Book(req.body);
         await book.save();
         res.status(201).json(book);
+        console.log('Book created successfully:', book);
     } catch (error) {
+        console.error('Error creating book:', error);
         res.status(500).json({ error: 'Failed to create book' });
     }
 };
@@ -51,7 +54,7 @@ const updateBook = async (req, res) => {
 // Delete a book by ID
 const deleteBook = async (req, res) => {
     try {
-        const book = await Book.findByIdAndDelete(req.params.id);
+        const book = await Book.findByIdAndDelete(req.params._id);
         if (!book) {
             return res.status(404).json({ error: 'Book not found' });
         }

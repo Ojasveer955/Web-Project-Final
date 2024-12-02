@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book List | Next Chapter Admin</title>
-    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const tableBody = document.querySelector("table tbody");
@@ -17,16 +17,16 @@
                     tableBody.innerHTML = '';
 
                     // Populate table rows dynamically
-                    data.forEach((book, index) => {
+                    data.forEach((book) => {
                         const row = document.createElement('tr');
                         row.innerHTML = `
-                            <td>${index + 1}</td>
+                            <td>${book._id}</td>
                             <td>${book.title}</td>
                             <td>${book.author}</td>
-                            <td>${book.genre}</td>
+                            <td>${book.category}</td>
                             <td>
-                                <a href="Admin_updatebook.html?id=${book._id}">Edit</a> |
-                                <a href="Admin_deletebook.html?id=${book._id}">Delete</a>
+                                <a href="/admin/updatebook?id=${book._id}">Edit</a> |
+                                <a href="/admin/deletebook?id=${book._id}">Delete</a>
                             </td>
                         `;
                         tableBody.appendChild(row);
@@ -46,8 +46,8 @@
             // Logout button functionality
             const logoutButton = document.querySelector('#logoutButton');
             logoutButton.addEventListener('click', () => {
-                // Redirect to the home page
-                window.location.href = 'HomePage.html';
+                // Redirect to the login page instead of HomePage.html
+                window.location.href = '/logout';
             });
         });
     </script>
@@ -60,10 +60,10 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#.html">Book List</a></li>
-            <li><a href="Admin_addbook.html">Add Book</a></li>
-            <li><a href="Admin_updatebook.html">Update Book</a></li>
-            <li><a href="Admin_deletebook.html">Delete Book</a></li>
+            <li><a href="/admin/viewbooks">Book List</a></li>
+            <li><a href="/admin/addbook">Add Book</a></li>
+            <li><a href="/admin/updatebook">Update Book</a></li>
+            <li><a href="/admin/deletebook">Delete Book</a></li>
         </ul>
     </nav>
     <div class="container">
