@@ -23,15 +23,30 @@
     </nav>
     <div class="container">
         <h2>Delete Book</h2>
-        <form action="/api/books/" method="delete">
-            <label for="book-id">Book ID to Delete:</label>
-            <input id="book-id" name="book-id" required>
-
-            <button type="submit">Delete Book</button>
-        </form>
+        <label for="book-id">Book ID to Delete:</label>
+        <input id="book-id" name="book-id" required>
+        <button id="delete-button">Delete Book</button>
         <div class="warning-message" style="margin-top: 20px; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; border-radius: 4px;">
             <strong>Warning:</strong> This action cannot be undone. Please make sure you want to delete this book before proceeding.
         </div>
     </div>
+    <script>
+        document.getElementById('delete-button').addEventListener('click', async () => {
+            const bookId = document.getElementById('book-id').value;
+            if (!bookId) {
+                alert("Please enter a book ID.");
+                return;
+            }
+            const response = await fetch(`/api/books/${bookId}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                alert("Book deleted successfully!");
+            } else {
+                const error = await response.json();
+                alert(`Error deleting book: ${error.error || 'Unknown error'}`);
+            }
+        });
+    </script>
 </body>
 </html>

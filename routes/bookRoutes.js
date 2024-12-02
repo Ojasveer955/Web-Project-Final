@@ -11,9 +11,9 @@ const {
 
 // Route definitions
 router.get('/', getAllBooks);       // Fetch all books
-router.get('/:id', getBookById);    // Fetch a book by ID
+router.get('/:_id', getBookById);    // Fetch a book by ID
 router.post('/', createBook);       // Create a new book
-router.put('/:id', updateBook);     // Update a book by ID
+router.put('/:_id', updateBook);     // Update a book by ID
 router.delete('/:_id', deleteBook);  // Delete a book by ID
 
 module.exports = router;
