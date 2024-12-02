@@ -6,7 +6,7 @@ const path = require('path');
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
 const bookRoutes = require('./routes/bookRoutes')
-
+const cors = require('cors')
 const app = express();
 
 // Connect to MongoDB
@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+app.use(cors());
 
 // Session configuration
 app.use(session({

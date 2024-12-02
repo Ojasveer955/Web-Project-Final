@@ -24,19 +24,33 @@ const getBookById = async (req, res) => {
     }
 };
 
-// Create a new book
 const createBook = async (req, res) => {
     try {
         console.log('Request received:', req.body);
+
+        // Validate request body
+        const { title, author, category, description } = req.body;
+        if (!title || !author || !category || !description) {
+            return res.status(400).json({ error: 'All fields are required' });
+        }
+
+        // Create new book instance
         const book = new Book(req.body);
+
+        // Save the book to the database
         await book.save();
-        res.status(201).json(book);
         console.log('Book created successfully:', book);
+
+        // Send success response
+        res.status(201).json({ message: 'Book created successfully', book });
     } catch (error) {
         console.error('Error creating book:', error);
-        res.status(500).json({ error: 'Failed to create book' });
+
+        // Send error response
+        res.status(500).json({ error: 'Failed to create book. Please try again later.' });
     }
 };
+
 
 // Update a book by ID
 const updateBook = async (req, res) => {
