@@ -13,6 +13,7 @@ const app = express();
 mongoose.connect('mongodb+srv://dishasatija23cse:aQp4gZnnQis0reNE@book-website.5kb60.mongodb.net/?retryWrites=true&w=majority&tls=true&tlsInsecure=true&appName=Book-Website')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err));
+app.use(express.json());
 
 // Middleware
 app.set('view engine', 'ejs');

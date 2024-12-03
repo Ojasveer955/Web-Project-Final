@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Book | Next Chapter Admin</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
     <header>
         <h1>Next Chapter Admin Dashboard</h1>
@@ -22,9 +24,10 @@
     </nav>
     <div class="container">
         <h2>Update Book Information</h2>
-        <form action="/api/books/" method="POST">
+        <div id="message"></div>
+        <form id="updateBookForm" onsubmit="handleSubmit(event)">
             <label for="book-id">Book ID:</label>
-            <input type="number" id="book-id" name="book-id" required>
+            <input type="text" id="book-id" name="book-id" required>
 
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required>
@@ -33,7 +36,7 @@
             <input type="text" id="author" name="author" required>
 
             <label for="category">Category:</label>
-            <input type="text" id="genre" name="genre" required>
+            <input type="text" id="category" name="category" required>
 
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" required></textarea>
@@ -41,5 +44,43 @@
             <button type="submit">Update Book</button>
         </form>
     </div>
+
+    <script>
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const bookId = document.getElementById('book-id').value;
+            
+            const bookData = {
+                title: document.getElementById('title').value,
+                author: document.getElementById('author').value,
+                category: document.getElementById('category').value,
+                description: document.getElementById('description').value
+            };
+
+            try {
+                const response = await fetch(`/api/books/${bookId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(bookData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('message').innerHTML = 
+                        '<div class="success">Book updated successfully!</div>';
+                    document.getElementById('updateBookForm').reset();
+                } else {
+                    throw new Error(result.error || 'Failed to update book');
+                }
+            } catch (error) {
+                document.getElementById('message').innerHTML = 
+                    `<div class="error">${error.message}</div>`;
+            }
+        }
+    </script>
 </body>
+
 </html>
